@@ -5,7 +5,8 @@ const port = 8080
 const server = http.createServer(function (req, res) { 
 
 	// Write a response to the client 
-	res.write('<H1>Test successfull</H1>') 
+	res.writeHeader(200, {"Content-Type": "text/html"})
+	res.write(`<H1>Test successfull</H1>`)
 
 	// End the response 
 	res.end() 
